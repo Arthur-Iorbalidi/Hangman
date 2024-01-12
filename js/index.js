@@ -214,7 +214,7 @@ RandomWord();
 
 document.addEventListener("keydown", (event) => {
     let key = event.key.toLowerCase();
-    if (!keys[key] && /^[a-z]$/.test(key) && !pickedLetters.includes(key) && !document.querySelector('.background_modal').classList.contains('opened')) {
+    if (!keys[key] && /^[a-z]$/.test(key) && !pickedLetters.includes(key) && !document.querySelector('.keyboard').classList.contains('disabled')) {
         OpenWordKeyboard(key);
         document.querySelectorAll('.keyboard button').forEach((button) => {
             if (button.textContent === key) {
